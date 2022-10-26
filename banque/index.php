@@ -2,7 +2,7 @@
 <title>Banque</title>
 <link rel="stylesheet" href="table.css">
 <?php
-$css = file_get_contents('/laragon/www/AKGEDIK/BLC/style.css');
+$css = file_get_contents('/laragon/www/AKGEDIK/PHP_POO/banque/style.css');
 
 echo "<h1> I. Banque</h1>";
 echo "Vous êtes chargé(e) de créer un projet orienté objet permettant de gérer des titulaires
