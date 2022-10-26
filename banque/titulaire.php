@@ -55,7 +55,7 @@ class Titulaire{
 
     // Nouveau Compte
     public function nouveauCompte(Compte $compte){
-        $this->comptes[]= $compte;
+        $this->comptes[] = $compte;
         echo "[$this->nom $this->prenom] solde initial $compte<br>";
     }
 
