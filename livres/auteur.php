@@ -4,13 +4,13 @@
 class Auteur{
     private string $nom;
     private string $prenom;
-    private array $auteurs;
+    private array $livres;
 
     // Construct
     public function __construct(string $nom, string $prenom){
         $this->nom = $nom;
         $this->prenom = $prenom;
-        $this->auteurs = [];
+        $this->livres = [];
     }
 
     // Getters
@@ -31,14 +31,22 @@ class Auteur{
         return $this->prenom; 
     }
 
-    public function nouvelAuteur(Livres $auteur){
-        $this->auteurs[]= $auteur;
-        echo "[$this->nom $this->prenom] $auteur<br>";
+    // Nouveau livre
+    public function nouveauLivre(Livres $livre){
+        $this->livres[] = $livre;
     }
 
-
-    // Convertir en string
-    public function __toString(){
-        return  $this->nom.$this->prenom;
+    // Bibliographie
+    public function afficherBibliographie() {
+        $pluriel = (count($this->livres) > 1 ? "s" : "");
+        $result = "Livre$pluriel de <b>[$this->nom $this->prenom]</b><pre>";
+        $result .= "</pre>Nombre de livre$pluriel : <b>".count($this->livres)."</b><ul>";
+        foreach ($this->livres as $livre) {
+            $result .= "<li>$livre</li>";
+            $result .= "<br>";
+        }
+        $result .= "</ul>";
+        return $result;
     }
 }
+?>

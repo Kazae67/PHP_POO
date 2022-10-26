@@ -6,20 +6,23 @@ class Livres{
     private int $parution;
     private int $pages;
     private float $prix;
-    private string $auteur;
+    private string $devise;
+    private Auteur $auteur;
 
     // Construct
-    public function __construct(string $titre,int $parution, int $pages, float $prix, string $auteur){
+    public function __construct(string $titre,int $parution, int $pages, float $prix, string $devise, Auteur $auteur){
         $this->titre = $titre;
         $this->parution = $parution;
         $this->pages = $pages;
         $this->prix = $prix;
+        $this->devise = $devise;
         $this->auteur = $auteur;
+        $this->auteur->nouveauLivre($this);
 
     }
 
     // Getters
-    public function getAuteur():string{
+    public function getAuteur():Auteur{
         return $this->auteur;
     }
     public function getTitre():string{
@@ -33,6 +36,9 @@ class Livres{
     }
     public function getPrix():float{
         return $this->prix;
+    }
+    public function getDevise():string{
+        return $this->devise;
     }
 
     // Setters
@@ -56,13 +62,14 @@ class Livres{
         $this->prix = $prix;
         return $this->prix;
     }
-
-    public function afficherBibliographie(){
-        echo "Lol";
+    public function setDevise(string $devise){
+        $this->devise = $devise;
+        return $this->devise;
     }
+
     // Convertir en string
     public function __toString(){
-        return "test livres";
+        return "Titre : $this->titre<br> Année de sortie : $this->parution<br>Nombre de pages : $this->pages<br> Prix : $this->prix $this->devise";
     }
-
 }
+?>
