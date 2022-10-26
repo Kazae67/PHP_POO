@@ -65,6 +65,6 @@ class Compte{
 
     // Convertir en String
     public function __toString(){
-        return $this->libelle." "."<strong>[$this->soldeInitial$this->devise]</strong>";
+        return $this->libelle."  "."<strong>[$this->soldeInitial$this->devise]</strong>";
     }
 }
