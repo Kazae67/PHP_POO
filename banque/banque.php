@@ -8,7 +8,7 @@ class Compte{
     private Titulaire $titulaire;
 
     // Construct 
-    public function __construct(string $libelle = "", float $soldeInitial = 0, string $devise = "€", Titulaire $titulaire){
+    public function __construct(string $libelle, float $soldeInitial, string $devise, Titulaire $titulaire){
         $this->libelle = $libelle;
         $this->soldeInitial = $soldeInitial;
         $this->devise = $devise;
@@ -60,7 +60,7 @@ class Compte{
     public function virement(float $solde, Compte $compte){
         $this->debiter($solde);
         $compte->crediter($solde);
-        echo "$this->titulaire transfert du $this->libelle [$solde.$this->devise] sur le $compte<br>";
+        echo "$this->titulaire transfert du $this->libelle [$solde$this->devise] sur le $compte<br>";
     }
 
     // Convertir en String
