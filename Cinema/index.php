@@ -1,5 +1,5 @@
 <html>
-<title>Livres</title>
+<title>Cinéma</title>
 <link rel="stylesheet" href="table.css">
 <?php
 $css = file_get_contents('/laragon/www/AKGEDIK/PHP_POO/livres/style.css');
@@ -16,6 +16,7 @@ echo "Vous avez en charge de gérer différentes entités autour de la thématiq
 $realisateur = new Realisateur("George", "Clown", "Homme", 25);
 $film = new Films("Le festival", 1992, 120, "Action", $realisateur);
 
-echo $realisateur->filmInfos();
+echo $realisateur->filmographie();
+echo $realisateur;
 
 ?>

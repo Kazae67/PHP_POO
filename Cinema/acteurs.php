@@ -2,23 +2,22 @@
 
 // Class Extends
 class Acteurs extends Personne{
-    private string $role;
+    private string $acteur;
 
     // Construct
-    public function __construct(string $nom, string $prenom, string $sexe, int $age, string $role){
+    public function __construct(string $nom, string $prenom, string $sexe, int $age, string $acteur){
         parent::__construct($nom, $prenom, $sexe, $age);
-        $this->role = $role;
+        $this->acteur = $acteur;
     }
 
     // Getters
-    public function getRole():string{
-        return $this->role;
+    public function getActeur():string{
+        return $this->acteur;
     }
 
     // Setters
-    public function setRole(string $role){
-        $this->role = $role;
-        return $this->role;
+    public function setActeur(string $acteur){
+        $this->acteur = $acteur;
+        return $this->acteur;
     }
-
 }

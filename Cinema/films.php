@@ -7,6 +7,7 @@ class Films{
     private int $duree;
     private string $genre;
     private Realisateur $realisateur;
+    
 
     // Construct
     public function __construct(string $titre, int $dateSortie, int $duree, string $genre, Realisateur $realisateur){
@@ -56,6 +57,7 @@ class Films{
         $this->realisateur = $realisateur;
         return $this->realisateur;
     }
+
 
     // Convertir en string
     public function __toString(){

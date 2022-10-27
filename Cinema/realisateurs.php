@@ -15,9 +15,8 @@ class Realisateur extends Personne{
         $this->films[] = $film;
     }
 
-
     // Bibliographie
-    public function filmInfos() {
+    public function filmographie() {
         $pluriel = (count($this->films) > 1 ? "s" : "");
         $result = "</pre>Nombre de film$pluriel : <b>".count($this->films)."</b><ul>";
         foreach ($this->films as $film) {
@@ -27,5 +26,7 @@ class Realisateur extends Personne{
         $result .= "</ul>";
         return $result;
     }
+
+
 
 }

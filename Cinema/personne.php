@@ -47,4 +47,11 @@ class Personne{
         return $this->age;
     }
 
+    // Convertir en string
+    public function __toString(){
+        return "Réalisateur : ".$this->getNom()." ".$this->getPrenom()."<br> 
+        Sexe : ".$this->getSexe()."<br> 
+        Âge : ".$this->getAge()."<br>";
+    }
+
 }
