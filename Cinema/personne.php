@@ -5,12 +5,14 @@ class Personne{
     private string $nom;
     private string $prenom;
     private string $sexe;
+    private int $age;
 
     // Construct
-    public function __construct(string $nom, string $prenom, string $sexe){
+    public function __construct(string $nom, string $prenom, string $sexe, int $age){
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->sexe = $sexe;
+        $this->age = $age;
     }
 
     // Getters
@@ -22,6 +24,9 @@ class Personne{
     }
     public function getSexe():string{
         return $this->sexe;
+    }
+    public function getAge():int{
+        return $this->age;
     }
 
     // Setters
@@ -36,6 +41,10 @@ class Personne{
     public function setSexe(string $sexe){
         $this->sexe = $sexe;
         return $this->sexe;
+    }
+    public function setAge(int $age){
+        $this->age = $age;
+        return $this->age;
     }
 
 }
