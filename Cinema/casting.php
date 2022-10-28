@@ -1,5 +1,8 @@
 <?php
 
+
+// Faire un tableau de casting, ce casting là vas se rajouter dans le role concerné, dans l'acteur, et le film,
+// ensuite, à partir d'un acteur lister ces roles et ces films, à partir d'un film pour lister les acteur et les roles, et à partir d'un role on pourra lister les films et les acteurs.
 // Class
 class Casting{
     private Roles $roleCasting;

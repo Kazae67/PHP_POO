@@ -9,6 +9,18 @@ class Genres{
     public function __construct(string $nomGenre){
         $this->nomGenre = $nomGenre;
     }
+
+    // Getters
+    public function getNomGenre():string{
+        return $this->nomGenre;
+    }
+
+    // Setters
+    public function setNomGenre(string $nomGenre){
+        $this->nomGenre = $nomGenre;
+        return $this->nomGenre;
+    }
+
     public function nouveauFilm(Films $film){
         $this->films[] = $film;
     }
@@ -16,4 +28,6 @@ class Genres{
     public function __toString(){
         return $this->nomGenre;
     }
+    
+
 }

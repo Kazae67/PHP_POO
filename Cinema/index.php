@@ -21,9 +21,15 @@ $realisateur2 = new Realisateurs("Saint", "Marie", "Femme", 60);
 $film = new Films("Le Singe", 1992, 120, $action, $realisateur2);
 $film2 = new Films("Le Cochon", 2012, 130, $action, $realisateur2);
 
+var_dump($action);
+
+
 echo $realisateur;
 echo $realisateur->filmographie();
 echo $realisateur2;
 echo $realisateur2->filmographie();
+
+
+
 
 ?>
