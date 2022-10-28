@@ -1,7 +1,7 @@
 <?php
 
 // Class Extends
-class Realisateur extends Personne{
+class Realisateurs extends Personne{
     private array $films;
     
     // Construct
@@ -26,5 +26,11 @@ class Realisateur extends Personne{
         $result .= "</ul>";
         return $result;
     }
-
+    
+    // Convertir en string
+    public function __toString(){
+        return "Réalisateur : ".$this->getNom()." ".$this->getPrenom()."<br> 
+        Sexe : ".$this->getSexe()."<br> 
+        Âge : ".$this->getAge()."<br>";
+    }
 }

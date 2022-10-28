@@ -6,11 +6,11 @@ class Films{
     private int $dateSortie;
     private int $duree;
     private Genres $genres;
-    private Realisateur $realisateur;
+    private Realisateurs $realisateur;
     
 
     // Construct
-    public function __construct(string $titre, int $dateSortie, int $duree, Genres $genres, Realisateur $realisateur){
+    public function __construct(string $titre, int $dateSortie, int $duree, Genres $genres, Realisateurs $realisateur){
         $this->titre = $titre;
         $this->dateSortie = $dateSortie;
         $this->duree = $duree;
@@ -33,8 +33,8 @@ class Films{
     public function getGenres():Genres{
         return $this->genres;
     }
-    public function getRealisateur():Realisateur{
-        return $this->Realisateur;
+    public function getRealisateur():Realisateurs{
+        return $this->realisateur;
     }
 
     // Setters test
@@ -59,9 +59,10 @@ class Films{
         return $this->realisateur;
     }
 
+    
 
     // Convertir en string
     public function __toString(){
-        return "Titre : $this->titre<br> Année de sortie : $this->dateSortie<br>Durée : $this->duree<br>";
+        return "Titre : $this->titre<br> Année de sortie : $this->dateSortie<br>Durée : $this->duree<br> Genre :". $this->getGenres();
     }
 }

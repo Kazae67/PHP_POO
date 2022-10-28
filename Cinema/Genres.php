@@ -7,10 +7,14 @@ class Genres{
 
     // Construct
     public function __construct(string $nomGenre){
-        $this->$nomGenre = $nomGenre;
+        $this->nomGenre = $nomGenre;
     }
     public function nouveauFilm(Films $film){
         $this->films[] = $film;
+    }
+
+    public function __toString(){
+        return $this->nomGenre;
     }
     
 
