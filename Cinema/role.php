@@ -1,7 +1,7 @@
 <?php
 
 class Role{
-// mettre un tableau array role
+
     // Class
     private string $role;
 
