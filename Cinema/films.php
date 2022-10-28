@@ -37,7 +37,7 @@ class Films{
         return $this->Realisateur;
     }
 
-    // Setters
+    // Setters test
     public function setTitre(string $titre){
         $this->titre = $titre;
         return $this->titre;
