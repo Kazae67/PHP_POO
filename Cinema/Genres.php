@@ -16,6 +16,4 @@ class Genres{
     public function __toString(){
         return $this->nomGenre;
     }
-    
-
 }

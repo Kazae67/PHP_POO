@@ -14,7 +14,7 @@ class Casting{
     }
 
     // Getters
-    public function getRoleCasting():Role{
+    public function getRoleCasting():Roles{
         return $this->roleCasting;
     }
     public function getFilmCasting():Films{
@@ -25,7 +25,7 @@ class Casting{
     }
 
     // Setters
-    public function setRoleCasting(Role $roleCasting){
+    public function setRoleCasting(Roles $roleCasting){
         $this->roleCasting = $roleCasting;
         return $this->roleCasting;
     }
