@@ -37,10 +37,5 @@ class Casting{
         $this->acteurCasting = $acteurCasting;
         return $this->acteurCasting;
     }
-
-    // Convertir en string
-    public function __toString(){
-        return "";
-    }
     
 }

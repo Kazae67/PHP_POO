@@ -27,6 +27,4 @@ class Realisateur extends Personne{
         return $result;
     }
 
-
-
 }

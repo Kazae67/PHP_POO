@@ -8,6 +8,7 @@ require "Personne.php";
 require "Films.php";
 require "Realisateurs.php";
 require "Acteurs.php";
+require "Genres.php";
 
 echo "<h1> III. Cinéma</h1>";
 echo "Vous avez en charge de gérer différentes entités autour de la thématique du cinéma.

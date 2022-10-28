@@ -10,7 +10,7 @@ class Films{
     
 
     // Construct
-    public function __construct(string $titre, int $dateSortie, int $duree,  Genres $genres, Realisateur $realisateur){
+    public function __construct(string $titre, int $dateSortie, int $duree, Genres $genres, Realisateur $realisateur){
         $this->titre = $titre;
         $this->dateSortie = $dateSortie;
         $this->duree = $duree;
@@ -30,7 +30,7 @@ class Films{
     public function getDuree():int{
         return $this->duree;
     }
-    public function getGenre():Genres{
+    public function getGenres():Genres{
         return $this->genres;
     }
     public function getRealisateur():Realisateur{
@@ -62,6 +62,6 @@ class Films{
 
     // Convertir en string
     public function __toString(){
-        return "Titre : $this->titre<br> Date de sortie : $this->dateSortie<br>Durée : $this->duree<br> Genre : $this->genre";
+        return "Titre : $this->titre<br> Année de sortie : $this->dateSortie<br>Durée : $this->duree<br>";
     }
 }
