@@ -1,7 +1,7 @@
 <?php
 
 // Class
-class Personne{
+class Personnes{
     private string $nom;
     private string $prenom;
     private string $sexe;

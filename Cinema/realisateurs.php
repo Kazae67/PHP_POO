@@ -1,7 +1,7 @@
 <?php
 
 // Class Extends
-class Realisateurs extends Personne{
+class Realisateurs extends Personnes{
     private array $films;
     
     // Construct

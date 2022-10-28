@@ -2,12 +2,12 @@
 
 // Class
 class Casting{
-    private Role $roleCasting;
+    private Roles $roleCasting;
     private Films $filmCasting;
     private Acteurs $acteurCasting;
 
     // Construct
-    public function __construct(Role $roleCasting, Films $filmCasting, Acteurs $acteurCasting){
+    public function __construct(Roles $roleCasting, Films $filmCasting, Acteurs $acteurCasting){
         $this->roleCasting = $roleCasting;
         $this->filmCasting = $filmCasting;
         $this->acteurCasting = $acteurCasting;

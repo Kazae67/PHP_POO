@@ -1,6 +1,6 @@
 <?php
 
-class Role{
+class Roles{
 
     // Class
     private string $role;
