@@ -25,9 +25,18 @@ class Genres{
         $this->films[] = $film;
     }
 
+    public function afficherFilmsParGenre() {
+        $result = "Films : $this<br><ul>";
+        foreach ($this->films as $film) {
+            $result .= "<li>$film</li>";
+        }
+        $result .= "</ul>";
+        return $result;
+    }
+
     public function __toString(){
         return $this->nomGenre;
     }
     
-
+    //foreach($films->getGenres() as $genre){ echo $genre->getName(); }
 }
