@@ -1,7 +1,7 @@
 <?php
 
 // Class Extends
-class Acteurs extends Personne{
+class Acteurs extends Personnes{
     private string $acteur;
 
     // Construct
