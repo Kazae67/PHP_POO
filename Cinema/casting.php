@@ -1,8 +1,16 @@
 <?php
 
+/* 
+- ÉTAPE 1
+- Faire un tableau de casting.
+- Ce casting doit se rajouter dans le role, l'acteur, et le film concerné.
 
-// Faire un tableau de casting, ce casting là vas se rajouter dans le role concerné, dans l'acteur, et le film,
-// ensuite, à partir d'un acteur lister ces roles et ces films, à partir d'un film pour lister les acteur et les roles, et à partir d'un role on pourra lister les films et les acteurs.
+- ÉTAPE 2
+- À partir d'un acteur, lister ses roles et ses films. 
+- À partir d'un film, lister les acteur et les roles. 
+- À partir d'un role, lister les films et les acteurs.
+*/ 
+
 // Class
 class Casting{
     private Roles $roleCasting;

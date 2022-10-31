@@ -38,5 +38,4 @@ class Genres{
         return $this->nomGenre;
     }
     
-    //foreach($films->getGenres() as $genre){ echo $genre->getName(); }
 }
