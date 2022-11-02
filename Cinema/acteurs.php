@@ -33,9 +33,9 @@ class Acteurs extends Personnes{
         // Afficher les roles
         public function AfficherRolesFilms() {
             $pluriel = (count($this->castings) > 1 ? "s" : "");
-            $result = "</pre>role$pluriel : <b>".count($this->castings)."</b><ul>";
+            $result = "</pre>Nombre de role$pluriel joué$pluriel: <b>".count($this->castings)."</b><ul>";
             foreach ($this->castings as $casting) {
-                $result .= "<li>Dans le film : ".$casting->getFilmCasting()." $this a joué :".$casting->getRoleCasting()."</li>";
+                $result .= "<li>".$casting->getFilmCasting()." $this ".$casting->getRoleCasting()."</li>";
                 $result .= "<br>";
             }
             $result .= "</ul>";

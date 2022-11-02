@@ -73,6 +73,6 @@ class Films{
         return "Titre : $this->titre<br> 
         Année de sortie : $this->dateSortie<br>
         Durée : $this->duree<br> 
-        Genre : ". $this->getGenres();
+        Genre : ". $this->getGenres()."<br>";
     }
 }
