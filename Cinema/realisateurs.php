@@ -5,7 +5,7 @@ class Realisateurs extends Personnes{
     private array $films;
     
     // Construct
-    public function __construct(string $nom, string $prenom, string $sexe, string $age){
+    public function __construct(string $nom, string $prenom, string $sexe, int $age){
         parent::__construct($nom, $prenom, $sexe, $age);
         $this->films = [];
     }

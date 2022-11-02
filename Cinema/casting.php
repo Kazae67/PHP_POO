@@ -22,6 +22,9 @@ class Casting{
         $this->roleCasting = $roleCasting;
         $this->filmCasting = $filmCasting;
         $this->acteurCasting = $acteurCasting;
+        $this->roleCasting->nouveauRoleCasting($this);
+        $this->filmCasting->nouveauFilmCasting($this);
+        $this->$acteurCasting->nouveauActeurCasting($this);    
     }
 
     // Getters
@@ -48,5 +51,15 @@ class Casting{
         $this->acteurCasting = $acteurCasting;
         return $this->acteurCasting;
     }
+
+    public function afficherActeur_FilmsRoles() {
+        $result = "Films : $this<br><ul>";
+        foreach ($this->films as $film) {
+            $result .= "<li>$film</li>";
+        }
+        $result .= "</ul>";
+        return $result;
+    }
+
     
 }

@@ -7,6 +7,8 @@ class Films{
     private int $duree;
     private Genres $genres;
     private Realisateurs $realisateur;
+    private array $castings;
+    
     
 
     // Construct
@@ -18,6 +20,7 @@ class Films{
         $this->realisateur->nouveauFilm($this);
         $this->genres = $genres;
         $this->genres->nouveauFilm($this);
+        $this->castings = [];
     }
 
     // Getters
@@ -57,6 +60,11 @@ class Films{
     public function setRealisateur(string $realisateur){
         $this->realisateur = $realisateur;
         return $this->realisateur;
+    }
+
+    // Nouveau 
+    public function nouveauFilmCasting(Casting $casting){
+        $this->castings[] = $casting;
     }
 
     

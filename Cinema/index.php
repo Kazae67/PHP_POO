@@ -35,4 +35,11 @@ echo $realisateur2->filmographie();
 echo "<h1>Afficher les films par genre</h1>";
 echo $action->afficherFilmsParGenre();
 echo $fiction->afficherFilmsParGenre();
+
+echo "<h1>Afficher les roles et films des acteurs</h1>";
+
+$acteur = new Acteurs("Akgedik", "Yasin", "Homme", 29, "Test");
+echo $acteur;
+echo $acteur->afficherCasting();
+
 ?>
