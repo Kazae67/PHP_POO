@@ -40,13 +40,22 @@ echo "<h1>Afficher les roles et films des acteurs</h1>";
 
 
 
-
-$roleCasting = new Roles("Son role");
-$filmCasting = new Films("Le Singe", 1992, 120, $action, $realisateur);
 $acteurCasting = new Acteurs("Akgedik", "Yasin", "Homme", 29, "Test");
+$roleCasting = new Roles("John Freeman");
+$filmCasting = new Films("Le Singe", 1992, 120, $action, $realisateur);
 $casting = new Casting($roleCasting, $filmCasting, $acteurCasting);
 
 echo $acteurCasting->AfficherRolesFilms();
+
+
+$acteurCasting2 = new Acteurs("Johny", "Depp", "Homme", 48, "Test");
+$roleCasting = new Roles("Le bouffon");
+$filmCasting = new Films("Le Dino", 1992, 120, $action, $realisateur);
+$casting = new Casting($roleCasting, $filmCasting, $acteurCasting2);
+
+echo $acteurCasting2->AfficherRolesFilms();
+
+
 
 
 
