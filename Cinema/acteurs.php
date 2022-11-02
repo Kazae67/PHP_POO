@@ -35,7 +35,7 @@ class Acteurs extends Personnes{
             $pluriel = (count($this->castings) > 1 ? "s" : "");
             $result = "</pre>role$pluriel : <b>".count($this->castings)."</b><ul>";
             foreach ($this->castings as $casting) {
-                $result .= "<li>Dans le film : ".$casting->getFilmCasting()." $this a joué :".$this->getRoleCasting()."</li>";
+                $result .= "<li>Dans le film : ".$casting->getFilmCasting()." $this a joué :".$casting->getRoleCasting()."</li>";
                 $result .= "<br>";
             }
             $result .= "</ul>";

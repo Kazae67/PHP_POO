@@ -24,7 +24,7 @@ class Casting{
         $this->acteurCasting = $acteurCasting;
         $this->roleCasting->nouveauRoleCasting($this);
         $this->filmCasting->nouveauFilmCasting($this);
-        $this->$acteurCasting->nouveauActeurCasting($this);    
+        $this->acteurCasting->nouveauActeurCasting($this);    
     }
 
     // Getters
