@@ -9,7 +9,6 @@ class Roles{
     // Construct
     public function __construct(string $roles){
         $this->roles = $roles;
-        $this->roles = [];
         $this->castings = [];
 
     }
@@ -29,5 +28,11 @@ class Roles{
     public function nouveauRoleCasting(Casting $casting){
         $this->castings[] = $casting;
     }
+
+    // Convertir en string
+    public function __toString(){
+        return "Ses roles : $this->roles";
+    }
+
     
 }

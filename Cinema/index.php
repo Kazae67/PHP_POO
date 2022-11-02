@@ -38,8 +38,22 @@ echo $fiction->afficherFilmsParGenre();
 
 echo "<h1>Afficher les roles et films des acteurs</h1>";
 
-$acteur = new Acteurs("Akgedik", "Yasin", "Homme", 29, "Test");
-echo $acteur;
-echo $acteur->afficherCasting();
+
+$roleCasting = new Roles("Son role");
+$filmCasting = new Films("Le Singe", 1992, 120, $action, $realisateur);
+$acteurCasting = new Acteurs("Akgedik", "Yasin", "Homme", 29, "Test");
+$casting = new Casting($roleCasting, $filmCasting, $acteurCasting);
+
+// $acteur = new Acteurs("Akgedik", "Yasin", "Homme", 29, "Test");
+// $sesRoles = new Roles("Son Role");
+// $sesFilm = new Films("Le Renard", 1992, 158, $action, $realisateur);
+// $casting = new Casting($sesRoles, $sesFilm, $acteur);
+// echo $acteur;
+// echo $acteur->AfficherSesRoles();
+// echo $casting;
+// echo $acteur->AfficherSesRoles();
+
+
+
 
 ?>

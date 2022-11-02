@@ -30,12 +30,12 @@ class Acteurs extends Personnes{
         $this->castings[] = $casting;
     }
 
-        // Bibliographie
-        public function afficherCasting() {
+        // Afficher les roles
+        public function AfficherRolesFilms() {
             $pluriel = (count($this->castings) > 1 ? "s" : "");
-            $result = "</pre>Casting$pluriel : <b>".count($this->castings)."</b><ul>";
+            $result = "</pre>role$pluriel : <b>".count($this->castings)."</b><ul>";
             foreach ($this->castings as $casting) {
-                $result .= "<li>$casting</li>";
+                $result .= "<li>Dans le film : ".$casting->getFilmCasting()." $this a joué :".$this->getRoleCasting()."</li>";
                 $result .= "<br>";
             }
             $result .= "</ul>";

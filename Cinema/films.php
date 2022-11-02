@@ -67,10 +67,12 @@ class Films{
         $this->castings[] = $casting;
     }
 
-    
 
     // Convertir en string
     public function __toString(){
-        return "Titre : $this->titre<br> Année de sortie : $this->dateSortie<br>Durée : $this->duree<br> Genre : ". $this->getGenres();
+        return "Titre : $this->titre<br> 
+        Année de sortie : $this->dateSortie<br>
+        Durée : $this->duree<br> 
+        Genre : ". $this->getGenres();
     }
 }

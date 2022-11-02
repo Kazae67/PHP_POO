@@ -51,15 +51,15 @@ class Casting{
         $this->acteurCasting = $acteurCasting;
         return $this->acteurCasting;
     }
+    
 
-    public function afficherActeur_FilmsRoles() {
-        $result = "Films : $this<br><ul>";
-        foreach ($this->films as $film) {
-            $result .= "<li>$film</li>";
-        }
-        $result .= "</ul>";
-        return $result;
+    // Convertir en string
+    public function __toString(){
+        return "Role : $this->roleCasting<br>
+        Films : $this->filmCasting<br> 
+        Acteurs : $this->acteurCasting<br>";
     }
+
 
     
 }
