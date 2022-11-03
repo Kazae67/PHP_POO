@@ -29,10 +29,22 @@ class Roles{
         $this->castings[] = $casting;
     }
 
+     // Afficher les roles 
+     public function AfficherRole_ActeursFilms() {
+        $pluriel = (count($this->castings) > 1 ? "s" : "");
+        $result = "</pre>Role$pluriel : <b>".count($this->castings)."</b><ul>";
+        foreach ($this->castings as $casting) {
+            $result .= "<li>".$casting->getActeurCasting()." $this ".$casting->getFilmCasting()."</li>";
+            $result .= "<br>";
+        }
+        $result .= "</ul>";
+        return $result;
+    }   
+
     // Convertir en string
     public function __toString(){
-        return "Ses roles : $this->role";
+        return "Ses roles : $this->role<br>";
     }
-    
+
 }
 ?>

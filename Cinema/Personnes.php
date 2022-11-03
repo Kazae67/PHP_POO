@@ -5,14 +5,14 @@ class Personnes{
     private string $nom;
     private string $prenom;
     private string $sexe;
-    private int $age;
+    private DateTime $dateNaissance;
 
     // Construct
-    public function __construct(string $nom, string $prenom, string $sexe, int $age){
+    public function __construct(string $nom, string $prenom, string $sexe, DateTime $dateNaissance){
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->sexe = $sexe;
-        $this->age = $age;
+        $this->dateNaissance = $dateNaissance;
     }
 
     // Getters
@@ -25,8 +25,12 @@ class Personnes{
     public function getSexe():string{
         return $this->sexe;
     }
-    public function getAge():int{
-        return $this->age;
+    public function getDateNaissance():DateTime{
+        return $this->dateNaissance;
+    }
+    public function getAge(){
+        $now = new DateTime();
+        return $this->dateNaissance->diff($now)->format("%Y ans");
     }
 
     // Setters
@@ -42,9 +46,15 @@ class Personnes{
         $this->sexe = $sexe;
         return $this->sexe;
     }
-    public function setAge(int $age){
-        $this->age = $age;
-        return $this->age;
+    public function setdateNaissance(DateTime $dateNaissance){
+        $this->dateNaissance = $dateNaissance;
+        return $this->dateNaissance;
+    }
+
+    public function __toString(){
+        return "
+        Nom : $this->nom<br>
+        Prenom : $this->prenom<br>";
     }
     
 }

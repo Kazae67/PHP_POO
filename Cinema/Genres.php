@@ -26,7 +26,7 @@ class Genres{
     }
 
     public function afficherFilmsParGenre() {
-        $result = "Films : $this<br><ul>";
+        $result = "Genre : $this->nomGenre<br><ul>";
         foreach ($this->films as $film) {
             $result .= "<li>$film</li>";
         }

@@ -5,8 +5,8 @@ class Realisateurs extends Personnes{
     private array $films;
     
     // Construct
-    public function __construct(string $nom, string $prenom, string $sexe, int $age){
-        parent::__construct($nom, $prenom, $sexe, $age);
+    public function __construct(string $nom, string $prenom, string $sexe, DateTime $dateNaissance){
+        parent::__construct($nom, $prenom, $sexe, $dateNaissance);
         $this->films = [];
     }
 
@@ -29,9 +29,10 @@ class Realisateurs extends Personnes{
     
     // Convertir en string
     public function __toString(){
-        return "Réalisateur : ".$this->getNom()." ".$this->getPrenom()."<br> 
-        Sexe : ".$this->getSexe()."<br> 
-        Âge : ".$this->getAge()."<br>";
+        return "
+        Réalisateur : ".$this->getNom()." ".$this->getPrenom()."<br>
+        Sexe : ".$this->getSexe()." <br>
+        Date de naissance :".$this->getDateNaissance()."<br>";
     }
 
 }

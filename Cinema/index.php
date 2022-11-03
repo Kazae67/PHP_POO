@@ -36,25 +36,21 @@ echo "<h1>Afficher les films par genre</h1>";
 echo $action->afficherFilmsParGenre();
 echo $fiction->afficherFilmsParGenre();
 
-echo "<h1>Afficher les roles et films des acteurs</h1>";
-
-
-
+echo "<h1>Afficher les roles et films d'un acteur</h1>";
 $acteurCasting = new Acteurs("Akgedik", "Yasin", "Homme", 29, "Test");
 $roleCasting = new Roles("John Freeman");
 $filmCasting = new Films("Le Singe", 1992, 120, $action, $realisateur);
 $casting = new Casting($roleCasting, $filmCasting, $acteurCasting);
 
-echo $acteurCasting->AfficherRolesFilms();
+echo $acteurCasting->AfficherActeur_RolesFilms();
 
 
 $acteurCasting2 = new Acteurs("Johny", "Depp", "Homme", 48, "Test");
-$roleCasting = new Roles("Le Bouffon");
 $roleCasting2 = new Roles("Le Chien");
-$filmCasting = new Films("Le Dino", 1992, 120, $action, $realisateur);
-$casting = new Casting($roleCasting, $filmCasting, $acteurCasting2);
+$filmCasting2 = new Films("Le Dino", 1992, 120, $action, $realisateur);
+$casting2 = new Casting($roleCasting2, $filmCasting2, $acteurCasting2);
 
-echo $acteurCasting2->AfficherRolesFilms();
+echo $acteurCasting2->AfficherActeur_RolesFilms();
 
 // $acteur = new Acteurs("Akgedik", "Yasin", "Homme", 29, "Test");
 // $sesRoles = new Roles("Son Role");
@@ -64,5 +60,24 @@ echo $acteurCasting2->AfficherRolesFilms();
 // echo $acteur->AfficherSesRoles();
 // echo $casting;
 // echo $acteur->AfficherSesRoles();
+
+echo "<h1>Afficher les acteurs et rôles d'un film</h1>";
+$acteurCasting3 = new Acteurs("Akgedik", "Yasin", "Homme", 29, "Test");
+$roleCasting3 = new Roles("John Freeman");
+$filmCasting3 = new Films("Le Singe", 1992, 120, $action, $realisateur);
+$casting3 = new Casting($roleCasting3, $filmCasting3, $acteurCasting3);
+
+echo $filmCasting3->AfficherFilm_ActeursRoles();
+
+
+echo "<h1>Afficher les acteurs et films d'un rôle</h1>";
+
+$acteurCasting4 = new Acteurs("Akgedik", "Yasin", "Homme", 29, "Test");
+$roleCasting4 = new Roles("John Freeman");
+$filmCasting4 = new Films("Le Singe", 1992, 120, $action, $realisateur);
+$casting4 = new Casting($roleCasting4, $filmCasting4, $acteurCasting4);
+
+echo $roleCasting4->AfficherRole_ActeursFilms();
+
 
 ?>

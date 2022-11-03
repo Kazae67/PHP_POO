@@ -65,13 +65,23 @@ class Films{
         $this->castings[] = $casting;
     }
 
+     // Afficher les roles 
+     public function AfficherFilm_ActeursRoles() {
+        $pluriel = (count($this->castings) > 1 ? "s" : "");
+        $result = "Film$pluriel : $this->titre<br>";
+        $result .= "<ul>";
+        foreach ($this->castings as $casting) {
+            $result .= "<li>".$casting->getActeurCasting()." $this ".$casting->getRoleCasting()."</li>";
+            $result .= "<br>";
+        }
+        $result .= "</ul>";
+        return $result;
+    }   
 
     // Convertir en string
     public function __toString(){
-        return "Titre : $this->titre<br> 
-        Année de sortie : $this->dateSortie<br>
-        Durée : $this->duree<br> 
-        Genre : ". $this->getGenres()."<br>";
+        return "
+        Titre : $this->titre<br>";
     }
-    
+
 }
