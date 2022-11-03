@@ -49,7 +49,8 @@ echo $acteurCasting->AfficherRolesFilms();
 
 
 $acteurCasting2 = new Acteurs("Johny", "Depp", "Homme", 48, "Test");
-$roleCasting = new Roles("Le bouffon");
+$roleCasting = new Roles("Le Bouffon");
+$roleCasting2 = new Roles("Le Chien");
 $filmCasting = new Films("Le Dino", 1992, 120, $action, $realisateur);
 $casting = new Casting($roleCasting, $filmCasting, $acteurCasting2);
 
