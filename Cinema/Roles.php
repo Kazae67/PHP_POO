@@ -3,25 +3,25 @@
 class Roles{
 
     // Class
-    private string $roles;
+    private string $role;
     private array $castings;
 
     // Construct
-    public function __construct(string $roles){
-        $this->roles = $roles;
+    public function __construct(string $role){
+        $this->role = $role;
         $this->castings = [];
 
     }
 
     // Getters
     public function getRole():string{
-        return $this->roles;
+        return $this->role;
     }
 
     // Setters
-    public function setRole(string $roles){
-        $this->roles = $roles;
-        return $this->roles;
+    public function setRole(string $role){
+        $this->role = $role;
+        return $this->role;
     }
 
     // Nouveau 
@@ -31,7 +31,7 @@ class Roles{
 
     // Convertir en string
     public function __toString(){
-        return "Ses roles : $this->roles";
+        return "Ses roles : $this->role";
     }
 
     
