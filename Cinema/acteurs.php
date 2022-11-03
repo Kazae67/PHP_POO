@@ -30,7 +30,7 @@ class Acteurs extends Personnes{
         $this->castings[] = $casting;
     }
 
-        // Afficher les roles
+        // Afficher les roles 
         public function AfficherRolesFilms() {
             $pluriel = (count($this->castings) > 1 ? "s" : "");
             $result = "Acteur : ".$this->getNom()." ".$this->getPrenom()."<br>";
@@ -49,3 +49,4 @@ class Acteurs extends Personnes{
         }
         
 }
+?>

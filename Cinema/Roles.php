@@ -33,6 +33,6 @@ class Roles{
     public function __toString(){
         return "Ses roles : $this->role";
     }
-
     
 }
+?>

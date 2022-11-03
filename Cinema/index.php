@@ -56,10 +56,6 @@ $casting = new Casting($roleCasting, $filmCasting, $acteurCasting2);
 
 echo $acteurCasting2->AfficherRolesFilms();
 
-
-
-
-
 // $acteur = new Acteurs("Akgedik", "Yasin", "Homme", 29, "Test");
 // $sesRoles = new Roles("Son Role");
 // $sesFilm = new Films("Le Renard", 1992, 158, $action, $realisateur);
@@ -68,8 +64,5 @@ echo $acteurCasting2->AfficherRolesFilms();
 // echo $acteur->AfficherSesRoles();
 // echo $casting;
 // echo $acteur->AfficherSesRoles();
-
-
-
 
 ?>

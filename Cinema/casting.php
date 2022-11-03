@@ -59,7 +59,6 @@ class Casting{
         Films : $this->filmCasting<br> 
         Acteurs : $this->acteurCasting<br>";
     }
-
-
     
 }
+?>

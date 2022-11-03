@@ -46,8 +46,6 @@ class Personnes{
         $this->age = $age;
         return $this->age;
     }
-
     
-
-
 }
+?>

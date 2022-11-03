@@ -9,8 +9,6 @@ class Films{
     private Realisateurs $realisateur;
     private array $castings;
     
-    
-
     // Construct
     public function __construct(string $titre, int $dateSortie, int $duree, Genres $genres, Realisateurs $realisateur){
         $this->titre = $titre;
@@ -75,4 +73,5 @@ class Films{
         Durée : $this->duree<br> 
         Genre : ". $this->getGenres()."<br>";
     }
+    
 }

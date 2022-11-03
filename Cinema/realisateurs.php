@@ -33,4 +33,6 @@ class Realisateurs extends Personnes{
         Sexe : ".$this->getSexe()."<br> 
         Âge : ".$this->getAge()."<br>";
     }
+
 }
+?>
