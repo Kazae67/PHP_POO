@@ -3,16 +3,16 @@
 // Class
 class Films{
     private string $titre;
-    private int $dateSortie;
+    private DateTime $dateSortie;
     private int $duree;
     private Genres $genres;
     private Realisateurs $realisateur;
     private array $castings;
     
     // Construct
-    public function __construct(string $titre, int $dateSortie, int $duree, Genres $genres, Realisateurs $realisateur){
+    public function __construct(string $titre, $dateSortie, int $duree, Genres $genres, Realisateurs $realisateur){
         $this->titre = $titre;
-        $this->dateSortie = $dateSortie;
+        $this->dateSortie = new DateTime($dateSortie);
         $this->duree = $duree;
         $this->realisateur = $realisateur;
         $this->realisateur->nouveauFilm($this);
@@ -25,9 +25,14 @@ class Films{
     public function getTitre():string{
         return $this->titre;
     }
-    public function getDateSortie():int{
+    public function getDateSortie():DateTime{
         return $this->dateSortie;
     }
+    
+    public function getDate(): string{
+        return $this->getDateSortie()->format('d-m-Y');
+    }
+
     public function getDuree():int{
         return $this->duree;
     }
@@ -81,7 +86,8 @@ class Films{
     // Convertir en string
     public function __toString(){
         return "
-        Titre : $this->titre<br>";
+        Titre : $this->titre<br>
+        Date de sortie : ".$this->getDate()."<br>";
     }
 
 }

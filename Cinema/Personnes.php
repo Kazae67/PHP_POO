@@ -8,11 +8,11 @@ class Personnes{
     private DateTime $dateNaissance;
 
     // Construct
-    public function __construct(string $nom, string $prenom, string $sexe, DateTime $dateNaissance){
+    public function __construct(string $nom, string $prenom, string $sexe, $dateNaissance){
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->sexe = $sexe;
-        $this->dateNaissance = $dateNaissance;
+        $this->dateNaissance = new DateTime($dateNaissance);
     }
 
     // Getters
@@ -28,9 +28,8 @@ class Personnes{
     public function getDateNaissance():DateTime{
         return $this->dateNaissance;
     }
-    public function getAge(){
-        $now = new DateTime();
-        return $this->dateNaissance->diff($now)->format("%Y ans");
+    public function getAge():string{
+        return $this->getDateNaissance()->format("d-m-Y");
     }
 
     // Setters
@@ -54,7 +53,8 @@ class Personnes{
     public function __toString(){
         return "
         Nom : $this->nom<br>
-        Prenom : $this->prenom<br>";
+        Prenom : $this->prenom<br>
+        Date de naissance :".$this->DateNaissance."<br>";
     }
     
 }

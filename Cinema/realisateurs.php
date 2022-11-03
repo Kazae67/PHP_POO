@@ -5,7 +5,7 @@ class Realisateurs extends Personnes{
     private array $films;
     
     // Construct
-    public function __construct(string $nom, string $prenom, string $sexe, DateTime $dateNaissance){
+    public function __construct(string $nom, string $prenom, string $sexe, $dateNaissance){
         parent::__construct($nom, $prenom, $sexe, $dateNaissance);
         $this->films = [];
     }
@@ -32,7 +32,7 @@ class Realisateurs extends Personnes{
         return "
         Réalisateur : ".$this->getNom()." ".$this->getPrenom()."<br>
         Sexe : ".$this->getSexe()." <br>
-        Date de naissance :".$this->getDateNaissance()."<br>";
+        Date de naissance : ".$this->getAge()."<br>";
     }
 
 }

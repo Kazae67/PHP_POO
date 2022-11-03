@@ -5,15 +5,13 @@ class Acteurs extends Personnes{
     private array $castings;
 
     // Construct
-    public function __construct(string $nom, string $prenom, string $sexe, DateTime $dateNaissance){
+    public function __construct(string $nom, string $prenom, string $sexe, $dateNaissance){
         parent::__construct($nom, $prenom, $sexe, $dateNaissance);
         $this->castings = [];
 
     }
 
-
-
-    // Nouveau 
+    // Ajouter Casting 
     public function nouveauActeurCasting(Casting $casting){
         $this->castings[] = $casting;
     }
