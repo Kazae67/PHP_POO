@@ -30,7 +30,7 @@ class Acteur extends Personne{
     }
 
     public function __toString(){
-        return "Acteur: ".$this->getNom()." ".$this->getPrenom()."<br>";
+        return "";
     }  
 }
 ?>
